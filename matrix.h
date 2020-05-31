@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+using namespace std;
+
 //Templates de utilidad para matrices
 
 //Número extremadamete alto (No arista)

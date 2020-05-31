@@ -1,10 +1,6 @@
 /*
 	Distancia más corta usando programación dinámica
 */
-
-#include <iostream>
-using namespace std;
-
 #include "matrix.h"
 #define T 12
 
