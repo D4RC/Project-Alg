@@ -3,10 +3,8 @@
 using namespace std;
 
 //Templates de utilidad para matrices
-
-//Número extremadamete alto (No arista)
-#define INF 254
-
+	//Número extremadamete alto - (Sin arista)
+	#define INF 254
 
 /*
 Template:   crearMatriz
@@ -75,7 +73,7 @@ void initialize(T** mat, size_t n) {
 }
 
 template <class T>
-void cargarEjemplo(T **mat) {
+void loadExample1(T **mat) {
 	mat[0][1]=6;
 	mat[0][2]=8;
 	mat[0][3]=7;

@@ -7,26 +7,26 @@
 int shortestDist() {
 	short** A = createMatrix<short>(T);
 	initialize(A, T);
-	cargarEjemplo<short>(A);
+	loadExample1<short>(A);
 	printMatrix(A, T);
 
-	int distancia[T];
-	distancia[T - 1] = 0;
+	int distance[T];
+	distance[T - 1] = 0;
 
 	for (int i = T - 2; i >= 0; i--)
 	{
-		distancia[i] = INF;
+		distance[i] = INF;
 
 		for (int j = i; j < T; j++)
 		{
 			if (*(*(A + i) + j) == INF)
 				continue;
 
-			distancia[i] = (distancia[i] < *(*(A + i) + j) + distancia[j]) ? distancia[i] : *(*(A + i) + j) + distancia[j];
+			distance[i] = (distance[i] < *(*(A + i) + j) + distance[j]) ? distance[i] : *(*(A + i) + j) + distance[j];
 		}
 	}
 
-	cout << endl << "La distancia minima es: " << distancia[0] << endl;
+	cout << endl << "La distancia minima es: " << distance[0] << endl;
 	deleteMatrix(A, T);
-	return distancia[0];
+	return distance[0];
 }
